@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>to-do pomodoro</title>
+    <link rel="shortcut icon" href="#">
     <link rel="stylesheet" href = "styles.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
@@ -19,17 +20,18 @@
 
             </div>
             <div class="stopwatch">
-                <h2 style="text-align: center;">StopWatch</h2>
-                <h1>00:00:00</h1>
-                <div class="buttons">
-
-                    <i class="fa-regular fa-circle-pause"></i>
-                    <i class="fa-regular fa-circle-play"></i>
-                    <i class="fa-regular fa-circle-stop"></i>
-                </div>
+                <h2 class="sw-title">StopWatch</h2>
+                <h1 id="displaytime">00:00:00:00</h1>
+                <div class="sw-buttons">
+                    <!-- <i class="fa-solid fa-pause" onclick="pause()"></i> -->
+                    <i id = "playbtn" class="fa-solid fa-play" onclick="start()"></i>
+                    <i class="fa-solid fa-stop" onclick="reset()"></i>
+                    <!-- <i class="fa-solid fa-plus" onclick="lap()"></i> -->
+                </div> 
             </div>
         </div>
     </div>
     </div>
+    <script src="app.js"></script>
 </body>
 </html>

@@ -3,6 +3,7 @@
     padding:0;
     box-sizing: border-box;
 }
+
 .full-body-container{
     display: flex;
     flex-direction: column;
@@ -28,7 +29,7 @@
     /* text settings */
     text-align: center;
     overflow: hidden;
-    font-size: 2rem;
+    font-size: 150%;
 }
 .body-container{
     align-items: center;
@@ -48,7 +49,6 @@
     border-radius: 5px;
     width:45%;
     height:95%;
-    /* margin:10px; */
 }
 
 .stopwatch{
@@ -56,7 +56,25 @@
     border-radius: 5px;
     width:45%;
     height:95%;
-    /* margin:10px; */
+    display: inline-flex;
+    flex-direction: column;
+  
+    align-items:center;
+}
+
+.stopwatch .stopwatch-contents{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.stopwatch .sw-buttons {
+    font-size: 1.5em;
+    padding-top:5px;
+}
+
+.stopwatch .sw-buttons #playbtn{
+    /* font-size: 1.5em; */
+    padding-right:10px;
 }
 
 @media only screen and (max-width:760px){

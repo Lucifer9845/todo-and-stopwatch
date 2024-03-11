@@ -33,15 +33,6 @@ function reset(){
     display.textContent="00:00:00:00"
 }
 
-// function pause(){
-//     if(isrunning)
-//     {
-//         clearInterval(timer);
-//         elapsedTime = Date.now()-startTime;
-//         isrunning = false;
-//     }
-// }
-
 function update(){
     const currentTime= Date.now();
     elapsedTime = currentTime-startTime;

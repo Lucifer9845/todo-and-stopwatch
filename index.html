@@ -16,8 +16,15 @@
         </div>
         <div class="body-container">
             <div class="todo">
-                <h2 style="text-align: center;">TO-DO List</h2>
-
+                <h2>TO-DO List</h2>
+                    <div>
+                        <input type="text" id="todoInput" placeholder="Add a task...">
+                        <i id = "addbtn" class = "fa-solid fa-plus"></i>
+                        <button></button>
+                    </div>
+                <ol id = "todolist">
+                    
+                </ol>
             </div>
             <div class="stopwatch">
                 <h2 class="sw-title">StopWatch</h2>
@@ -28,6 +35,9 @@
                     <i class="fa-solid fa-stop" onclick="reset()"></i>
                     <!-- <i class="fa-solid fa-plus" onclick="lap()"></i> -->
                 </div> 
+                <div class="laps">
+                    <ul></ul>
+                </div>
             </div>
         </div>
     </div>

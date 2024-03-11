@@ -44,12 +44,7 @@
     height:75vh;
 }
 
-.todo{
-    border:2px solid black;
-    border-radius: 5px;
-    width:45%;
-    height:95%;
-}
+
 
 .stopwatch{
     border:2px solid black;
@@ -77,9 +72,39 @@
     padding-right:10px;
 }
 
+/* to-do styling */
+.todo{
+    border:2px solid black;
+    border-radius: 5px;
+    width:45%;
+    height:95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#addbtn{
+    padding-left:10px;
+}
+
+
+
+li{
+    display:flex;
+    justify-content: space-between;
+    padding:10px;
+    align-items: center;
+}
+
+.fa-xmark{
+padding-left:10px;
+position: relative;
+right: 2%;
+}
+
 @media only screen and (max-width:760px){
     .body-container{
-       display: inline-flex;
+       display: flex;
     }
     .todo{
         width:95%;

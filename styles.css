@@ -4,7 +4,12 @@
     box-sizing: border-box;
 }
 
+body{
+    background-color: #FF90BC;
+}
+
 .full-body-container{
+    background-color: #FFC0D9;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -16,6 +21,7 @@
     height: 80vh;
     border: 2px solid black;
     border-radius: 5px;
+    box-shadow: 0 10px 8px 0 rgba(0, 0, 0, 0.2), 0 10px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .heading{
@@ -39,9 +45,11 @@
     height:60vh;
     overflow: hidden;
     margin:10px;
+    background-color: #FFB5DA;
     border:2px solid black;
     border-radius: 4px;
     height:75vh;
+    box-shadow: 0 10px 8px 0 rgba(0, 0, 0, 0.2), 0 10px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 
@@ -53,8 +61,16 @@
     height:95%;
     display: inline-flex;
     flex-direction: column;
-  
+  background-color: #FED9ED;
     align-items:center;
+    box-shadow: 0 10px 8px 0 rgba(0, 0, 0, 0.2), 0 10px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#displaytime{
+    border:0;
+    margin:10px 0;
+    padding:4px 8px;
+    border-radius: 15px;
+    background-color: rgba(231, 188, 222, 0.4);
 }
 
 .stopwatch .stopwatch-contents{
@@ -75,18 +91,36 @@
 /* to-do styling */
 .todo{
     border:2px solid black;
+    background-color: #FED9ED;
     border-radius: 5px;
     width:45%;
     height:95%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    box-shadow: 0 10px 8px 0 rgba(0, 0, 0, 0.2), 0 10px 20px 0 rgba(0, 0, 0, 0.19);
+    overflow: auto;
 }
 
 #addbtn{
     padding-left:10px;
+    font-size: 1.3em;
+    margin-top:5px;
+    
 }
 
+#todoInput{
+    margin-top:10px;
+    font-size: 1.3em;
+    width:80%;
+    text-align: left;
+    background-color: #E7BCDE;
+    border: 0px;
+    outline: none;
+    box-shadow: 3px 3px 6px  rgba(0,0,0,0.3), -3px -3px 6px  rgba(0,0,0,0.3);
+    padding:4px;
+    border-radius: 5px;
+}
 
 
 li{
@@ -94,6 +128,7 @@ li{
     justify-content: space-between;
     padding:10px;
     align-items: center;
+    font-size: 1.4em;
 }
 
 .fa-xmark{

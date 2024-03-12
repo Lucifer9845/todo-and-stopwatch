@@ -1,10 +1,12 @@
 const display = document.getElementById('displaytime');
 const playPauseBtn = document.getElementById('playbtn');
+const lapsbtn = document.getElementById('laps');
 
 let timer = null;
 let startTime = 0;
 let elapsedTime = 0;
 let isrunning = false;
+let lapcounter = 0;
 
 function start(){
     if(!isrunning){
@@ -16,14 +18,28 @@ function start(){
     }
     else if(isrunning)
     {
+        laps();
         clearInterval(timer);
         elapsedTime = Date.now()-startTime;
         isrunning = false;
         playPauseBtn.classList.remove('fa-pause');
         playPauseBtn.classList.add( 'fa-play' );
+        
     }
 
 }
+
+function laps(){
+    if(isrunning){
+        const newlap = document.createElement('li');
+        newlap.innerText = display.textContent;
+
+        lapsbtn.appendChild(newlap);
+        lapcounter++;
+    }
+}
+
+
 
 function reset(){
     clearInterval(timer);
@@ -33,6 +49,12 @@ function reset(){
     display.textContent="00:00:00:00"
     playPauseBtn.classList.remove('fa-pause');
     playPauseBtn.classList.add( 'fa-play' );
+
+    //code which removes the added lap counter;
+    while(lapcounter>0){
+        lapsbtn.removeChild(lapsbtn.firstChild);
+        lapcounter--;
+    }
 }
 
 function update(){
@@ -51,6 +73,8 @@ function update(){
 
     display.textContent=`${hours}:${minute}:${seconds}:${miliseconds}`;
 }
+
+
 // the to-do List part
 const todoInput = document.getElementById('todoInput');
 const addtodobtn = document.getElementById('addbtn');

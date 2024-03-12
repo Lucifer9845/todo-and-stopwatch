@@ -16,11 +16,10 @@
         </div>
         <div class="body-container">
             <div class="todo">
-                <h2>TO-DO List</h2>
+                <h1>TO-DO List</h1>
                     <div>
                         <input type="text" id="todoInput" placeholder="Add a task...">
                         <i id = "addbtn" class = "fa-solid fa-plus"></i>
-                        <button></button>
                     </div>
                 <ol id = "todolist">
                     
@@ -33,10 +32,10 @@
                     
                     <i id = "playbtn" class="fa-solid fa-play" onclick="start()"></i>
                     <i class="fa-solid fa-stop" onclick="reset()"></i>
-                    <!-- <i class="fa-solid fa-plus" onclick="lap()"></i> -->
+                    <i id = "laptbn" class="fa-solid fa-plus" onclick="laps()"></i>
                 </div> 
-                <div class="laps">
-                    <ul></ul>
+                <div>
+                    <ul id = "laps"></ul>
                 </div>
             </div>
         </div>
